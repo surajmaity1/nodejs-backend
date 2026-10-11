@@ -1,7 +1,7 @@
 {
-  "name": "nodejs",
+  "name": "nodejs-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Backend application using NodeJs",
   "type": "module",
   "scripts": {
     "prebuild": "prisma generate",
