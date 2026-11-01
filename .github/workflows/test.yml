@@ -15,8 +15,19 @@ jobs:
     timeout-minutes: 5
 
     env:
-      DATABASE_URL: "postgresql://postgres:postgres@localhost:5432/database"
       ENV: "TEST"
+      DATABASE_URL: "postgresql://postgres:postgres@localhost:5432/database"
+      GOOGLE_CLIENT_ID: "test-client-id"
+      GOOGLE_CLIENT_SECRET: "test-client-secret"
+      GOOGLE_REDIRECT_URI: "http://localhost:8000/v1/auth/google/callback"
+      FRONTEND_BASE_URL: "http://localhost:3000"
+      COOKIE_DOMAIN: "test-domain"
+      ACCESS_TOKEN_LIFETIME: "100"
+      REFRESH_TOKEN_LIFETIME: "100"
+      PRIVATE_KEY: "test-private-key"
+      PUBLIC_KEY: "test-public-key"
+      ACCESS_TOKEN_NAME: "test-access"
+      REFRESH_TOKEN_NAME: "test-refresh"
 
     steps:
     - name: Checkout

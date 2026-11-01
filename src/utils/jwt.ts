@@ -8,7 +8,7 @@ type CustomJwtPayload = jwt.JwtPayload & {
   tokenType: string;
 };
 
-const generateToken = (userId: string, tokenType: Token): string => {
+export const generateToken = (userId: string, tokenType: Token): string => {
   try {
     const now = Date.now();
     let token_lifetime = parseInt(config.ACCESS_TOKEN_LIFETIME);
